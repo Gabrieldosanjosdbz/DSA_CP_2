@@ -3,11 +3,11 @@
 
 Este repositório contém o trabalho referente ao segundo checkpoint da disciplina de **Data Structures and Algorithms (DSA)** da FIAP.
 
-### Integrantes do Grupo:
-- Joao Pedro de Souza Ferreira
-- Gabrielly Sousa Lorentz
-- Gabriel dos Anjos Rocha de Santana
-- Heitor Fernandes Barbosa
+### Integrantes do Grupo e o que fez:
+- Heitor Fernandes Barbosa: Fibonacci
+- Gabrielly Sousa Lorentz: Fatorial
+- Gabriel dos Anjos Rocha de Santana: Palíndromo
+- Joao Pedro de Souza Ferreira: Substring
 
 ### Descrição:
 Este é um programa onde faz calculos de Fibonacci e Fatorial, verifica se uma palavra é Palíndromo e se uma palavra contém em outra (Substring).
