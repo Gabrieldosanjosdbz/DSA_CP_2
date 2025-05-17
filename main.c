@@ -5,6 +5,7 @@
 
 int fatorial(int num) {
     // Gabrielly Sousa Lorentz
+    
     int resultado = 1;
     for (int i = 1; i <= num; i++) {
         resultado *= i;
