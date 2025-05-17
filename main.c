@@ -4,6 +4,7 @@
 #include <string.h>
 
 int fatorial(int num) {
+    // Gabrielly Sousa Lorentz
     int resultado = 1;
     for (int i = 1; i <= num; i++) {
         resultado *= i;
@@ -12,6 +13,8 @@ int fatorial(int num) {
 }
 
 int eh_palindromo(char palavra[]) {
+    // Gabriel dos Anjos Rocha de Santana
+    
     int inicio = 0;
     int fim = strlen(palavra) - 1;
 
@@ -26,6 +29,8 @@ int eh_palindromo(char palavra[]) {
 }
 
 int contem_substring(char str1[], char str2[]) {
+    // Joao Pedro de Souza Ferreira
+    
     if (strstr(str1, str2) != NULL) {
         return 1;
     }
@@ -44,6 +49,8 @@ int main() {
 
     switch (opcao) {
         case 1: {
+            // Heitor Fernandes Barbosa
+            
             int elementos_fibonacci;
             printf("\nSequencia de Fibonacci:");
             printf("\nDigite a quantidade de elementos que voce deseja: ");
@@ -78,6 +85,8 @@ int main() {
         }
 
         case 2: {
+            // Gabrielly Sousa Lorentz
+            
             int N;
 
             do {
@@ -88,7 +97,7 @@ int main() {
             int* fatoriais = (int*)malloc(N * sizeof(int));
 
             if (fatoriais == NULL) {
-                printf("Erro ao alocar memória para os fatoriais.\n");
+                printf("Erro ao alocar memÃ³ria para os fatoriais.\n");
                 return 1;
             }
 
@@ -105,6 +114,8 @@ int main() {
         }
 
         case 3: {
+            // Gabriel dos Anjos Rocha de Santana
+            
             char palavra[101];
 
             printf("Digite uma palavra (sem espacos, ate 100 caracteres): ");
@@ -120,6 +131,8 @@ int main() {
         }
 
         case 4: {
+            // Joao Pedro de Souza Ferreira
+            
             char str1[101], str2[101];
 
             printf("Digite a primeira string: ");
