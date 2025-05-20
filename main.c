@@ -12,6 +12,21 @@ int fatorial(int num) {
     return resultado;
 }
 
+int eh_palindromo(char palavra[]) {
+    // Gabriel dos Anjos Rocha de Santana
+    int inicio = 0;
+    int fim = strlen(palavra) - 1;
+ 
+    while (inicio < fim) {
+        if (tolower(palavra[inicio]) != tolower(palavra[fim])) {
+            return 0;
+        }
+        inicio++;
+        fim--;
+    }
+    return 1;
+}
+
 int main() {
     printf("===== MENU DE EXERCICIOS =====");
     printf("\n\n1 - Sequencia de Fibonacci\n2 - Fatoriais\n3 - Verificar Palindromo\n4 - Verificar Substring.");
@@ -87,7 +102,19 @@ int main() {
         }
  
         case 3: {
-
+            // Gabriel dos Anjos Rocha de Santana
+            char palavra[101];
+ 
+            printf("Digite uma palavra (sem espacos, ate 100 caracteres): ");
+            fgets(palavra, sizeof(palavra), stdin);
+            palavra[strcspn(palavra, "\n")] = '\0';
+ 
+            if (eh_palindromo(palavra)) {
+                printf("A palavra '%s' e um palindromo.\n", palavra);
+            } else {
+                printf("A palavra '%s' nao e um palindromo.\n", palavra);
+            }
+            break;
         }
  
         case 4: {
