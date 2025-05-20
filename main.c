@@ -27,6 +27,14 @@ int eh_palindromo(char palavra[]) {
     return 1;
 }
 
+int contem_substring(char str1[], char str2[]) {
+    // Joao Pedro de Souza Ferreira
+    if (strstr(str1, str2) != NULL) {
+        return 1;
+    }
+    return 0;
+}
+
 int main() {
     printf("===== MENU DE EXERCICIOS =====");
     printf("\n\n1 - Sequencia de Fibonacci\n2 - Fatoriais\n3 - Verificar Palindromo\n4 - Verificar Substring.");
@@ -118,7 +126,23 @@ int main() {
         }
  
         case 4: {
-
+            // Joao Pedro de Souza Ferreira
+            char str1[101], str2[101];
+ 
+            printf("Digite a primeira string: ");
+            fgets(str1, sizeof(str1), stdin);
+            str1[strcspn(str1, "\n")] = '\0';
+ 
+            printf("Digite a segunda string: ");
+            fgets(str2, sizeof(str2), stdin);
+            str2[strcspn(str2, "\n")] = '\0';
+ 
+            if (contem_substring(str1, str2)) {
+                printf("A segunda string esta contida na primeira.\n");
+            } else {
+                printf("A segunda string nao esta contida na primeira.\n");
+            }
+            break;
         }
  
         default:
