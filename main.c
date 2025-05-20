@@ -3,6 +3,15 @@
 #include <ctype.h>
 #include <string.h>
 
+int fatorial(int num) {
+    // Gabrielly Sousa Lorentz
+    int resultado = 1;
+    for (int i = 1; i <= num; i++) {
+        resultado *= i;
+    }
+    return resultado;
+}
+
 int main() {
     printf("===== MENU DE EXERCICIOS =====");
     printf("\n\n1 - Sequencia de Fibonacci\n2 - Fatoriais\n3 - Verificar Palindromo\n4 - Verificar Substring.");
@@ -50,7 +59,31 @@ int main() {
         }
  
         case 2: {
-
+            // Gabrielly Sousa Lorentz
+            int N;
+ 
+            do {
+                printf("Digite um numero inteiro N (entre 1 e 20): ");
+                scanf("%d", &N);
+            } while (N < 1 || N > 20);
+ 
+            int* fatoriais = (int*)malloc(N * sizeof(int));
+ 
+            if (fatoriais == NULL) {
+                printf("Erro ao alocar memória para os fatoriais.\n");
+                return 1;
+            }
+ 
+            for (int i = 1; i <= N; i++) {
+                fatoriais[i-1] = fatorial(i);
+            }
+ 
+            for (int i = 1; i <= N; i++) {
+                printf("%d! = %d\n", i, fatoriais[i-1]);
+            }
+ 
+            free(fatoriais);
+            break;
         }
  
         case 3: {
